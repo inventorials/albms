@@ -51,7 +51,7 @@ class HomeViewController: UIViewController {
         addShadowPath.addCurve(to: CGPoint(x: shadowRadius, y: curveAmount), controlPoint1: CGPoint(x: width, y: 0 - shadowRadius), controlPoint2: CGPoint(x: 0, y: 0 - shadowRadius))
 
         homeView.addToLibraryShadow.backgroundColor = .clear
-        homeView.addToLibraryShadow.layer.shadowColor = AlbmsColors.accentColor.cgColor
+        homeView.addToLibraryShadow.layer.shadowColor = AlbmsColors.appleMusicColor.cgColor
         homeView.addToLibraryShadow.layer.shadowOpacity = 0.5
         homeView.addToLibraryShadow.layer.shadowRadius = shadowRadius
         homeView.addToLibraryShadow.layer.masksToBounds = false
@@ -83,7 +83,6 @@ class HomeViewController: UIViewController {
         let settingsViewController = SettingsViewController()
         settingsViewController.transitioningDelegate = self
         settingsViewController.modalPresentationStyle = .custom
-        settingsViewController.settingsViewDelegate = self
         show(settingsViewController, sender: self)
     }
 }
@@ -103,7 +102,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "albumCollectionViewCell", for: indexPath as IndexPath) as? AlbumCollectionViewCell else { return UICollectionViewCell() }
 
         cell.coverArt.setRounded()
-        cell.artistNameLabel.textColor = AlbmsColors.accentColor
+        cell.artistNameLabel.textColor = AlbmsColors.appleMusicColor
         cell.delegate = self
         return cell
     }
@@ -197,19 +196,6 @@ extension HomeViewController: HomeCollectionViewDelegate {
                 adjacentCell.artistNameLabel.alpha = 1.0
             }
         }
-    }
-}
-
-extension HomeViewController: SettingsViewDelegate {
-    func shouldUpdateAccentColors(_ settingsView: SettingsView, withColor color: UIColor) {
-        for albumCollectionViewCell in self.homeView.homeCollectionView.visibleCells {
-            if let cell = albumCollectionViewCell as? AlbumCollectionViewCell {
-                cell.artistNameLabel.textColor = AlbmsColors.accentColor
-            }
-        }
-        homeView.addToLibaryIcon.tintColor = AlbmsColors.accentColor
-        homeView.settingsButton.backgroundColor = AlbmsColors.accentColor
-        homeView.addToLibraryShadow.layer.shadowColor = AlbmsColors.accentColor.cgColor
     }
 }
 

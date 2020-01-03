@@ -50,7 +50,7 @@ extension PlayerViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "playerTableViewCell", for: indexPath) as? PlayerTableViewCell else {
             return UITableViewCell()
         }
-
+        cell.numberLabel.text = "\(indexPath.row + 1)"
         return cell
     }
 }

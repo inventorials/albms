@@ -31,7 +31,7 @@ class HomeView: UIView {
 
     let settingsButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = AlbmsColors.accentColor
+        button.backgroundColor = AlbmsColors.appleMusicColor
         button.layer.cornerRadius = 25
         button.addTarget(self, action: #selector(HomeViewController.settingsButtonTouched), for: .touchUpInside)
         return button
@@ -47,7 +47,7 @@ class HomeView: UIView {
     let addToLibaryIcon: UIImageView = {
         let addToLibaryIcon = UIImageView()
         addToLibaryIcon.image = UIImage(named: "add")
-        addToLibaryIcon.tintColor =  AlbmsColors.accentColor
+        addToLibaryIcon.tintColor =  AlbmsColors.appleMusicColor
         addToLibaryIcon.alpha = 0.0
         return addToLibaryIcon
     }()

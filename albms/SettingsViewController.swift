@@ -8,15 +8,9 @@
 
 import UIKit
 
-protocol SettingsViewDelegate: AnyObject {
-    func shouldUpdateAccentColors(_ settingsView: SettingsView, withColor color: UIColor)
-}
-
 class SettingsViewController: UIViewController {
 
     private let settingsView = SettingsView()
-
-    weak var settingsViewDelegate: SettingsViewDelegate?
 
     override func viewDidLoad() {
         view.addSubview(settingsView)
@@ -34,14 +28,6 @@ class SettingsViewController: UIViewController {
     }
 
     @objc func appleMusicConnectButtonTouched() {
-        updateAccentColor(toColor: AlbmsColors.appleMusicColor)
-    }
-
-    private func updateAccentColor(toColor color: UIColor) {
-        AlbmsColors.accentColor = color
-        UIView.animate(withDuration: 0.5) {
-            self.settingsView.backgroundColor = AlbmsColors.accentColor
-        }
-        settingsViewDelegate?.shouldUpdateAccentColors(settingsView, withColor: color)
+        
     }
 }

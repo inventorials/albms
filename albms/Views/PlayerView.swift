@@ -9,6 +9,25 @@
 import UIKit
 
 class PlayerView: UIView {
+
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Title Label"
+        label.textColor = .white
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+        return label
+    }()
+
+    let artistLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Artist Label"
+        label.textColor = .white
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        return label
+    }()
+
     let playerTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .clear

@@ -12,14 +12,14 @@ protocol AlbumTappedDelegate {
     func albumTapped()
 }
 
-class AlbumCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
+class AlbumCollectionViewCell: UICollectionViewCell {
 
     var delegate : AlbumTappedDelegate?
 
     let coverArt: UIImageView = {
         var image = UIImage(named: "placeholder")!
         let imageView = UIImageView(image: image)
-        //imageView.convertImageToGrayscale()
+//        imageView.convertImageToGrayscale()
         return imageView
     }()
 
@@ -47,7 +47,7 @@ class AlbumCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate
     let artistNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Artist Name"
-        label.textColor = AlbmsColors.accentColor
+        label.textColor = AlbmsColors.appleMusicColor
         label.font = UIFont.systemFont(ofSize: 23, weight: .medium)
         label.textAlignment = .center
         return label
@@ -111,9 +111,5 @@ class AlbumCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
     }
 }
