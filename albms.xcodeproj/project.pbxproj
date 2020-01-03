@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40EE29C23BF29390041534A /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EE29B23BF29390041534A /* UILabel+Extensions.swift */; };
+		C40EE29E23BF29FB0041534A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EE29D23BF29FB0041534A /* UIFont+Extensions.swift */; };
 		C49E2D522351019A00756EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E2D512351019A00756EB9 /* SceneDelegate.swift */; };
 		C49E2D542351019A00756EB9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E2D532351019A00756EB9 /* HomeViewController.swift */; };
 		C49E2D572351019A00756EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49E2D552351019A00756EB9 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40EE29B23BF29390041534A /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		C40EE29D23BF29FB0041534A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		C49E2D4C2351019A00756EB9 /* albms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = albms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49E2D512351019A00756EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C49E2D532351019A00756EB9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40EE29A23BF291D0041534A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C49E2D672351090D00756EB9 /* UIImage+Extensions.swift */,
+				C40EE29D23BF29FB0041534A /* UIFont+Extensions.swift */,
+				C40EE29B23BF29390041534A /* UILabel+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C49E2D432351019A00756EB9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +95,13 @@
 		C49E2D4E2351019A00756EB9 /* albms */ = {
 			isa = PBXGroup;
 			children = (
+				C40EE29A23BF291D0041534A /* Extensions */,
 				C49E2D87235556B700756EB9 /* AppDelegate.swift */,
 				C49E2D512351019A00756EB9 /* SceneDelegate.swift */,
 				C49E2D7B235542BE00756EB9 /* CircularTransition.swift */,
 				C49E2D6923510DBC00756EB9 /* SnappingCollectionViewLayout.swift */,
 				C49E2D652351048F00756EB9 /* AlbumCollectionViewCell.swift */,
 				C49E2D7523514CEB00756EB9 /* PlayerTableViewCell.swift */,
-				C49E2D672351090D00756EB9 /* UIImage+Extensions.swift */,
 				C49E2D862355541B00756EB9 /* Views */,
 				C49E2D852355540C00756EB9 /* Controllers */,
 				C49E2D552351019A00756EB9 /* Main.storyboard */,
@@ -210,7 +224,9 @@
 				C49E2D88235556B700756EB9 /* AppDelegate.swift in Sources */,
 				C49E2D682351090D00756EB9 /* UIImage+Extensions.swift in Sources */,
 				C49E2D7A235540D900756EB9 /* SettingsView.swift in Sources */,
+				C40EE29C23BF29390041534A /* UILabel+Extensions.swift in Sources */,
 				C49E2D522351019A00756EB9 /* SceneDelegate.swift in Sources */,
+				C40EE29E23BF29FB0041534A /* UIFont+Extensions.swift in Sources */,
 				C49E2D662351048F00756EB9 /* AlbumCollectionViewCell.swift in Sources */,
 				C4E48B9E23AC5F3300E3141E /* HomeCollectionView.swift in Sources */,
 			);

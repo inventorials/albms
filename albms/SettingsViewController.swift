@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import StoreKit
 
 class SettingsViewController: UIViewController {
 
     private let settingsView = SettingsView()
+    private let defaults = UserDefaults()
 
     override func viewDidLoad() {
         view.addSubview(settingsView)
@@ -28,6 +30,12 @@ class SettingsViewController: UIViewController {
     }
 
     @objc func appleMusicConnectButtonTouched() {
-        
+        if defaults.bool(forKey: "appleMusicAuthorized") == false {
+            SKCloudServiceController.requestAuthorization { (status) in // Add NSAppleMusicUsageDescription to plist
+                if status == .authorized {
+                    self.defaults.set(true, forKey: "appleMusicAuthorized")
+                }
+            }
+        }
     }
 }

@@ -102,7 +102,6 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "albumCollectionViewCell", for: indexPath as IndexPath) as? AlbumCollectionViewCell else { return UICollectionViewCell() }
 
         cell.coverArt.setRounded()
-        cell.artistNameLabel.textColor = AlbmsColors.appleMusicColor
         cell.delegate = self
         return cell
     }
